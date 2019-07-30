@@ -1,6 +1,5 @@
 <?
 use Bitrix\Main\Type\DateTime;
-
 function work_hours($workhourStart = 9, $workhourEnd = 18, $dateTime = null)
 {
     if (!$dateTime){
