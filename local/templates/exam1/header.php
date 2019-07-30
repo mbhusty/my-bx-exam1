@@ -6,6 +6,7 @@ use Bitrix\Main\Localization\Loc;
 Loc::loadMessages(__FILE__);
 $assets = \Bitrix\Main\Page\Asset::getInstance();
 $page = $APPLICATION->GetCurPage(false);
+$workTime = (date(H)>9) && (date(H)< 18);
 ?>
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
@@ -39,9 +40,9 @@ $APPLICATION->ShowHead();
                 <div class="logo-block"><a href="<?= SITE_DIR ?>" class="logo">Мебельный магазин</a>
                 </div>
                 <div class="main-phone-block">
-                    <?if (work_hours()):?>
+                    <?if ($workTime):?>
                     <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
-                    <? else:?>
+                    <?else:?>
                     <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
                     <?endif;?>
                     <div class="shedule">время работы с 9-00 до 18-00</div>
