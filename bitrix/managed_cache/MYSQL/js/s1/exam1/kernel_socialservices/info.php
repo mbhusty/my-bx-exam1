@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/js/socialservices/ss.js" => "15643844001419",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>
